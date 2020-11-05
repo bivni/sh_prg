@@ -1,5 +1,4 @@
-
-CRED_FILE="$HOME/.aon_vpn "
+CRED_FILE="$HOME/.aon_vpn"
 
 if test -r "$CRED_FILE" 
 then
