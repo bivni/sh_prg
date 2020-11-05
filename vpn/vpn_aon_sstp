@@ -1,6 +1,6 @@
 
 CRED_FILE="$HOME/.aon_vpn "
-CRED_FILE=~ikochergin/.aon_vpn
+
 if test -r "$CRED_FILE" 
 then
     source "$CRED_FILE" 
