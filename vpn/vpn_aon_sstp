@@ -1,0 +1,15 @@
+
+CRED_FILE="$HOME/.aon_vpn "
+CRED_FILE=~ikochergin/.aon_vpn
+if test -r "$CRED_FILE" 
+then
+    source "$CRED_FILE" 
+else
+    echo  "bad credetial file $CRED_FILE"
+    exit 22
+fi
+
+(set -x; sleep 8 ; VPN_ROUTE="$(ifconfig -a | grep -A 2 ppp | pcregrep -o  '(?<=inet )[\d.]+')" ; route add -net 192.168.208.0/24 "$VPN_ROUTE") &
+
+/usr/local/sbin/sstpc --log-stderr --cert-warn --user "$VPN_U_NAME" --password  "$VPN_U_PASS" "$VPN_H_NAME"  usepeerdns require-mschap-v2 noauth noipdefault refuse-eap noccp
+
