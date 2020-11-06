@@ -1,0 +1,13 @@
+ while getopts ab:c Options; do
+ case $Options in
+	 a) echo "Option: a";;
+	 b) echo "Option: b, Argument: $OPTARG";;
+	 c) echo "Option: c";;
+ esac
+ done
+
+shift $((OPTIND-1))
+for arg 
+do
+	echo $arg
+done

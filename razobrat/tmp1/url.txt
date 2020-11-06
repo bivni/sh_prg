@@ -1,0 +1,3 @@
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/389-ds-base-1.3.10.1-14.el7_8.x86_64.rpm
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/389-ds-base-libs-1.3.10.1-14.el7_8.x86_64.rpm
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackage/ImageMagick-6.7.8.9-18.el7.x86_64.rpm

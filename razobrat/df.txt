@@ -1,0 +1,11 @@
+Filesystem                Size  Used Avail Use% Mounted on
+devtmpfs                  3.8G     0  3.8G   0% /dev
+tmpfs                     3.8G   14M  3.8G   1% /dev/shm
+tmpfs                     3.8G   18M  3.8G   1% /run
+tmpfs                     3.8G     0  3.8G   0% /sys/fs/cgroup
+/dev/mapper/ol_lx74-root   50G  7.1G   43G  15% /
+/dev/sda1                1014M  320M  695M  32% /boot
+/dev/sdb1                  82G   33M   82G   1% /u01
+/dev/mapper/ol_lx74-home   24G  393M   24G   2% /home
+tmpfs                     773M   28K  773M   1% /run/user/1000
+tmpfs                     773M   16K  773M   1% /run/user/42

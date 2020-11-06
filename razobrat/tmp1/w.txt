@@ -1,0 +1,6 @@
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+oracle   pts/1    192.168.202.50   Tue18    5.00s  2.22s  0.08s w
+oracle   pts/3    192.168.202.50   Thu15   22:49m  0.30s  0.30s -bash
+oracle   :0       :0               Wed11   ?xdm?   2:39m  2.58s /usr/libexec/gnome-session-binary --session gnome-classic
+oracle   pts/4    :0               Wed11   46:14m  0.38s  0.38s bash
+oracle   pts/5    :10.0            Wed16   30:56m  0.51s  0.51s bash

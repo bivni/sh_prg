@@ -1,0 +1,7 @@
+date:
+Tue Nov  3 11:40:25 MSK 2020
+users:
+ 11:40:46 up 14:59,  1 user,  load average: 0.08, 0.07, 0.05
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+oracle   pts/1    192.168.202.50   Mon20    6.00s  1.42s  0.07s w
+   Ilya Kochergin
