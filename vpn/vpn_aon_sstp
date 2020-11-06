@@ -1,3 +1,4 @@
+#!/bin/env bash
 CRED_FILE="$HOME/.aon_vpn"
 
 if test -r "$CRED_FILE" 
@@ -7,7 +8,8 @@ else
     echo  "bad credetial file $CRED_FILE"
     exit 22
 fi
-if [[ "$(uname)" = "Darwin" ]]
+
+if [[ "$(uname)" == "Darwin" ]]
 then 
 (set -x; sleep 8 ; VPN_ROUTER="$(ifconfig -a | grep -A 2 ppp | \
   pcregrep -o  '(?<=inet )[\d.]+')" ; route add -net 192.168.208.0/24 "$VPN_ROUTER") &
@@ -15,5 +17,6 @@ else
 (set -x; sleep 8 ; VPN_ROUTER="$(ifconfig -a | grep -A 2 ppp | \
   grep -P -o  '(?<=inet )[\d.]+')" ; ip route add  192.168.208.0/24 via "$VPN_ROUTER") &
 fi 
-/usr/local/sbin/sstpc --log-stderr --cert-warn --user "$VPN_U_NAME" --password  "$VPN_U_PASS" "$VPN_H_NAME"  usepeerdns require-mschap-v2 noauth noipdefault refuse-eap noccp
+
+sstpc --log-stderr --cert-warn --user "$VPN_U_NAME" --password  "$VPN_U_PASS" "$VPN_H_NAME"  usepeerdns require-mschap-v2 noauth noipdefault refuse-eap noccp
 
